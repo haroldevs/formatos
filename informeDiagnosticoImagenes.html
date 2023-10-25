@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFORME DE DIAGNOSTICO POR IMÁGENES</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        padding: 20px 40px;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 150px 1fr 90px 1fr;
+        grid-gap: 10px;
+        padding: 10px 0px;
+      }
+      .separarPuntos {
+        display: flex;
+        justify-content: space-between;
+      }
+      span {
+        font-weight: 700;
+      }
+      hr {
+        border: 1px solid #000;
+      }
+      .firma {
+        margin-top: 40px;
+        width: 350px;
+        text-align: center;
+        /* //copilot alinear firma a la derecha */
+        margin-left: auto;
+        padding-bottom: 14px;
+      }
+      .detalleFirma {
+        display: flex;
+        justify-content: space-around;
+        gap: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INFORME DE DIAGNOSTICO POR IMÁGENES</h1>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Nombres</span>
+        <span>:</span>
+      </div>
+      <div>[NOMBRES]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Fecha de realización</span>
+        <span>:</span>
+      </div>
+      <div>[FECHA_REALIZACION]</div>
+      <div>
+        <div class="separarPuntos">
+          <span>Hora</span>
+          <span>:</span>
+        </div>
+      </div>
+      <div>[HORA]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Compañía</span>
+        <span>:</span>
+      </div>
+      <div>[COMPANIA]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Doc. Identidad</span>
+        <span>:</span>
+      </div>
+      <div>[DOC_IDENTIDAD]</div>
+      <div>
+        <div class="separarPuntos">
+          <span>Edad</span>
+          <span>:</span>
+        </div>
+      </div>
+      <div>[EDAD]</div>
+    </div>
+
+    <div class="container">
+      <div class="separarPuntos">
+        <span>N° de Placa</span>
+        <span>:</span>
+      </div>
+      <div>[N_PLACA]</div>
+    </div>
+
+    <div class="container">
+      <div class="separarPuntos">
+        <span>EXAMEN</span>
+        <span>:</span>
+      </div>
+      <div>[EXAMEN]</div>
+    </div>
+
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Presunción Diagnostica</span>
+        <span>:</span>
+      </div>
+      <div>[PRESUNCION_DIAGNOSTICA]</div>
+    </div>
+    <hr />
+    <div>
+      <p>Ténica</p>
+      <p>
+        LA RADIOGRAFÍA DEL<span>[PARTE_CUERPO]</span> EN INCIDENCIA
+        <span>[DETALLE_PARTE_CUERPO] </span> MUESTRA:
+      </p>
+      <p>HALLAZGOS:</p>
+      <p>[HALLAZGOS]</p>
+      <p>CONCLUSIÓN:</p>
+      <li>
+        RADIOGRAFÍA DE <span>[PARTE_CUERPO]</span>&nbsp;
+        <span>[CONCLUSION_DETALLE1]</span>
+      </li>
+      <li>
+        <span>[CONCLUSION_DETALLE2]</span>
+      </li>
+      <p>ATENTAMENTE,</p>
+      <!-- FIRMA -->
+      <div class="firma">
+        <div>[FIRMA]</div>
+        <hr />
+        <div>Dr. <span>[NOMBRE_DOCTOR]</span></div>
+        <div>Medico Radiólogo</div>
+        <div class="detalleFirma">
+          <div>
+            <span>CMP:</span>
+            <span>[NUMERO_CMP]</span>
+          </div>
+          <div>
+            <span>RNE:</span>
+            <span>[RNE]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

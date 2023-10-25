@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        padding: 20px 40px;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 150px 1fr 90px 1fr;
+        grid-gap: 10px;
+        padding: 10px 0px;
+      }
+      .separarPuntos {
+        display: flex;
+        justify-content: space-between;
+      }
+      hr {
+        border: 1px solid #000;
+      }
+      .semiBold {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      h6 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INFORME DE DIAGNOSTICO POR IMÁGENES</h1>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Nombre</span>
+        <span>:</span>
+      </div>
+      <div>[NOMBRE]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Fecha de realización</span>
+        <span>:</span>
+      </div>
+      <div>[FECHA_REALIZACION]</div>
+      <div>
+        <div class="separarPuntos">
+          <span>Hora</span>
+          <span>:</span>
+        </div>
+      </div>
+      <div>[HORA]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Compañía</span>
+        <span>:</span>
+      </div>
+      <div>[COMPANIA]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>Doc. Identidad</span>
+        <span>:</span>
+      </div>
+      <div>[DOC_IDENTIDAD]</div>
+      <div>
+        <div class="separarPuntos">
+          <span>Edad</span>
+          <span>:</span>
+        </div>
+      </div>
+      <div>[EDAD]</div>
+    </div>
+    <div class="container">
+      <div class="separarPuntos">
+        <span>N° de Placa</span>
+        <span>:</span>
+      </div>
+      <div>[N_PLACA]</div>
+    </div>
+
+    <div class="container">
+      <div class="separarPuntos">
+        <span>EXAMEN</span>
+        <span>:</span>
+      </div>
+      <div>[EXAMEN]</div>
+    </div>
+    <hr />
+    <p class="semiBold">[ESTUDIO_TECNICA] &nbsp; <span>,MUESTRA</span></p>
+    <p>[HALLAZGOS]</p>
+    <h6 class="semiBold">CONCLUSIÓN</h6>
+    <p>
+      <li class="semiBold">[CONCLUSION]</li>
+    </p>
+    <div
+      class="semiBold"
+      style="padding-top: 8px; display: flex; justify-content: space-between"
+    >
+      <p>BI-RADS (MG): &nbsp; <span>[BI_RADS_NUMERO]</span></p>
+      <div style="display: flex">
+        <div>[ALERTA]</div>
+        <div>[NO_ALERTA]</div>
+      </div>
+    </div>
+    <p>[SUGERENCIA]</p>
+    <p style="padding-top: 10px">[LEYENDA_RESULTADOS]</p>
+    <p class="semiBold" style="padding-top: 20px">ATENTAMENTE.</p>
+  </body>
+</html>
