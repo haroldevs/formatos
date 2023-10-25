@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe de Evaluación Ginecología</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+
+        padding: 20px;
+      }
+      header {
+        display: flex;
+        position: relative;
+      }
+
+      img {
+        position: absolute;
+        top: 10px;
+      }
+      h1 {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+      main {
+        margin-top: 80px;
+      }
+      .full-width-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #000;
+        padding: 10px 20px;
+      }
+
+      .title {
+        background-color: #dcdcdc;
+        font-weight: 700;
+      }
+      td {
+        padding: 6px 8px;
+      }
+      .underlineCampo {
+        border-bottom: 1px solid #000;
+      }
+      .separarPuntos {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.jpg" />
+      <h1>INFORME MÉDICO PREVENTIVO ANUAL</h1>
+    </header>
+    <main>
+      <table class="full-width-table">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">I. FILIACIÓN</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Fechas</span>
+              <span>:</span>
+            </td>
+            <td class="underlineCampo">[FECHAS]</td>
+            <td class="separarPuntos">
+              <span>Fechas</span>
+              <span>:</span>
+            </td>
+            <td class="underlineCampo">[COD_AFILIADO]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Nombres</span> <span>:</span></td>
+            <td class="underlineCampo">[NOMBRES]</td>
+            <td class="separarPuntos"><span>Edad</span> <span>:</span></td>
+            <td class="underlineCampo">[EDAD]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Med. Eval.</span> <span>:</span>
+            </td>
+            <td colspan="3" class="underlineCampo">[MED_EVAL]</td>
+            <td class="separarPuntos" style="width: 40px">
+              <span>CMP</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" style="width: 170px">[CMP]</td>
+          </tr>
+          <br />
+          <tr>
+            <td class="title" colspan="6">II. ANTECEDENTES</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Menarquia</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[MENARQUIA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>RC</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[RC]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>FUR</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[FUR]</td>
+          </tr>
+          <tr>
+            <td style="display: flex; gap: 14px">
+              <div><span>G:</span> <span>[G]</span></div>
+              <div><span>P:</span> <span>[P]</span></div>
+            </td>
+            <td class="underlineCampo" colspan="5">[G_P]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Metodo Anticonceptivo</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[METODO_ANTICONCEPTIVO]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span> Ultimo PAP</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[ULTIMO_PAP]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span> Ultimo Mamografía</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[ULTIMO_MAMOGRAFIA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Cirugía Ginecológica</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[CIRUGIA_GINECOLOGICA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Anteced. Personales</span> <span>:</span>
+            </td>
+            <td
+              class="underlineCampo"
+              style="height: 80px; vertical-align: baseline"
+              colspan="5"
+            >
+              [ANTECEDENTES_PERSONALES]
+            </td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Anteced. Familiares</span> <span>:</span>
+            </td>
+            <td
+              class="underlineCampo"
+              style="height: 80px; vertical-align: baseline"
+              colspan="5"
+            >
+              [ANTECEDENTES_FAMILIARES]
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" class="title">III. ENFERMEDAD ACTUAL</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Flujo vaginal</span> <span>:</span>
+            </td>
+
+            <td colspan="1" style="white-space: nowrap; width: 1%">
+              <div style="display: flex; gap: 2px">
+                <div>
+                  <span>Si</span>
+                  <span>([FV_TR])</span>
+                </div>
+                <div>
+                  <span>No</span>
+                  <span>([FV_FA])</span>
+                </div>
+              </div>
+            </td>
+            <td class="underlineCampo" colspan="4" style="width: max-content">
+              [FLUJO_VAGINAL]
+            </td>
+          </tr>
+
+          <tr>
+            <td class="separarPuntos">
+              <span>Dispareunia</span> <span>:</span>
+            </td>
+
+            <td colspan="1" style="white-space: nowrap; width: 1%">
+              <div style="display: flex; gap: 2px">
+                <div>
+                  <span>Si</span>
+                  <span>([DIS_TR])</span>
+                </div>
+                <div>
+                  <span>No</span>
+                  <span>([DIS_FA)</span>
+                </div>
+              </div>
+            </td>
+            <td class="underlineCampo" colspan="4" style="width: max-content">
+              [DISPAREUNIA]
+            </td>
+          </tr>
+
+          <tr>
+            <td class="separarPuntos">
+              <span>Incont. urina. esfuerzo</span> <span>:</span>
+            </td>
+
+            <td colspan="1" style="white-space: nowrap; width: 1%">
+              <div style="display: flex; gap: 2px">
+                <div>
+                  <span>Si</span>
+                  <span>([IUE_TR])</span>
+                </div>
+                <div>
+                  <span>No</span>
+                  <span>([IUE_FA)</span>
+                </div>
+              </div>
+            </td>
+            <td class="underlineCampo" colspan="4" style="width: max-content">
+              [INCONT_URINA_ESFUERZO]
+            </td>
+          </tr>
+
+          <tr>
+            <td class="separarPuntos"><span>Otros</span> <span>:</span></td>
+
+            <td colspan="1" style="white-space: nowrap; width: 1%">
+              <div style="display: flex; gap: 2px">
+                <div>
+                  <span>Si</span>
+                  <span>([OT_TR])</span>
+                </div>
+                <div>
+                  <span>No</span>
+                  <span>([OT_FA)</span>
+                </div>
+              </div>
+            </td>
+            <td class="underlineCampo" colspan="4" style="width: max-content">
+              [OTROS]
+            </td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">IV. EXAMEN CLINICO</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Mano Derecha</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[MANO_DERECHA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Mano Izquierda</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[MANO_IZQUIERDA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Abdomen</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[ABDOMEN]</td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">V. EXAMEN GINECOLOGICO</td>
+          </tr>
+
+          <tr>
+            <td class="separarPuntos">
+              <span>Genitales Externos</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[GENITALES_EXTERNOS]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Vagina</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[VAGINA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Cérvix</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[CERVIX]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Cuerpo Uterino</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[CUERPO_UTERINO]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Anexos</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[ANEXOS]</td>
+          </tr>
+
+          <tr>
+            <td class="separarPuntos">
+              <span>Fondo de saco</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[FONDO_SACO]</td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">VI. EXAMENES AUXILIARES</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Eco. Pelvica</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[ECO_PELVICA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Eco. Mamaria</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[ECO_MAMARIA]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos">
+              <span>Eco. Transvaginal</span> <span>:</span>
+            </td>
+            <td class="underlineCampo" colspan="5">[ECO_TRANSVAGINAL]</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Rx. Torax</span> <span>:</span></td>
+            <td class="underlineCampo" colspan="5">[RX_TORAX]</td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">VII. PAPANICOLAU</td>
+          </tr>
+          <tr>
+            <td class="separarPuntos"><span>Se tomo</span> <span>:</span></td>
+            <td colspan="1" style="white-space: nowrap; width: 1%">
+              <div style="display: flex; gap: 2px">
+                <div>
+                  <span>Si</span>
+                  <span>([ST_TR])</span>
+                </div>
+                <div>
+                  <span>No</span>
+                  <span>([ST_FA)</span>
+                </div>
+              </div>
+            </td>
+            <td class="underlineCampo" colspan="4" style="width: max-content">
+              <div>[EXPORTADO_DE_LABORATORIO???]</div>
+              <div>
+                <span>Positivo: </span>
+                <span class="underlineCampo">[P_SI] / [P_NO]</span>
+              </div>
+              <div>
+                <span>Otros Hallazgos:</span
+                ><span class="underlineCampo" style="width: 100%"
+                  >[OTROS_HALLAZGOS]</span
+                >
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">VIII. MAMOGRAFÍA BILATERAL</td>
+          </tr>
+          <tr>
+            <td colspan="6">[CONCLUSIONES_MAMOGRAFIA]</td>
+          </tr>
+          <tr>
+            <td colspan="6">BIRADS: [BIRADS]</td>
+          </tr>
+          <tr>
+            <td colspan="6">
+              <div style="display: flex; gap: 6px">
+                <span style="white-space: nowrap"
+                  >IX.CULTIVO DE SECRECIÓN VAGINAL :</span
+                >
+                <div>[SV_SI]/[SV_NO]</div>
+                <div class="underlineCampo" style="width: 100%">
+                  [CULTIVO_SECRECION_VAGINAL]
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">
+              <div style="display: flex; gap: 6px">
+                <span style="white-space: nowrap">X. DETECCION VPH :</span>
+                <div>[VPH_SI]/[VPH_NO]</div>
+                <div class="underlineCampo" style="width: 100%">
+                  [DETECCION_VPH]
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">
+              <div style="display: flex; gap: 6px">
+                <span style="white-space: nowrap">XI. IVAA :</span>
+                <div>[IVAA_SI]/[IVAA_NO]</div>
+                <div class="underlineCampo" style="width: 100%">[IVAA]</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">
+              <div style="display: flex; gap: 6px">
+                <span style="white-space: nowrap"
+                  >XII. SALUD SEXUAL Y REPRODUCTIVA :</span
+                >
+                <div>[SSR_SI]/[SSR_NO]</div>
+                <div class="underlineCampo" style="width: 100%">
+                  [SALUD_SEXUAL_REPRODUCTIVA]
+                </div>
+              </div>
+              <div>
+                (CONSEJERIA DE PLANIFICACION FAMILIAR Y SALUD REPRODUCTIVA)
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">XIII. CONCLUSIONES DIAGNOSTICOS</td>
+          </tr>
+          <tr>
+            <td colspan="6" style="height: 80px; vertical-align: baseline">
+              <div style="display: flex; gap: 10px">
+                <span style="white-space: nowrap; align-self: flex-start">
+                  CIE 10:
+                </span>
+                <span class="underlineCampo" style="width: 100%">
+                  [CONCLUSIONES_DIAGNOSTICOS]
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="title" colspan="6">XIV. RECOMENDACIONES</td>
+          </tr>
+          <tr>
+            <td colspan="6" style="height: 80px; vertical-align: baseline">
+              [RECOMENDACIONES]
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

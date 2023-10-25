@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFORME MÉDICO PREVENTIVO ANUAL</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+
+        padding: 20px;
+      }
+
+      header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        flex: 0 0 auto;
+      }
+
+      h1 {
+        flex: 1 1 auto;
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 40px;
+      }
+      .full-width-table {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-collapse: collapse;
+      }
+      td {
+        white-space: nowrap;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 4px;
+      }
+
+      /* Estilos para el checkbox personalizado */
+      .checkbox-container {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-radius: 4px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+
+      .checkbox-container input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .checkbox-container
+        input[type="checkbox"]:checked
+        + .custom-checkbox-label::before {
+        content: "✘";
+        position: absolute;
+        top: 1px;
+        left: 3px;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .custom-checkbox-label::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      /* radio */
+      .radio-container {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-radius: 8px;
+        vertical-align: middle;
+      }
+
+      .custom-radio-label::before {
+        content: "✘";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        line-height: 1;
+        opacity: 0;
+      }
+
+      .radio-container input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .radio-container
+        input[type="radio"]:checked
+        + .custom-radio-label::before {
+        opacity: 1;
+      }
+
+      /* td vacio */
+      .void {
+        width: 20px;
+      }
+      /* td observaciones */
+      .observaciones {
+        height: 80px;
+        vertical-align: top;
+      }
+      .tdAntecedentes {
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="logo.jpg" />
+      <h1>INFORME MÉDICO PREVENTIVO ANUAL</h1>
+    </header>
+    <main>
+      <table border="1px" class="full-width-table">
+        <tbody>
+          <tr>
+            <td colspan="9">I. FILIACIÓN</td>
+          </tr>
+          <tr>
+            <td colspan="1">Apellidos y Nombres</td>
+            <td colspan="5">[NOMBRE_COMPLETO]</td>
+            <td>DNI:</td>
+            <td colspan="2">[DNI]</td>
+          </tr>
+          <tr>
+            <td>Fecha Nacimiento:</td>
+            <td>[FECHA_NACIMIENTO]</td>
+            <td>Dpto. Nac. :</td>
+            <td>[DPTO_NAC]</td>
+            <td>Sexo</td>
+            <td>[SEXO]</td>
+            <td>Empresa:</td>
+            <td>[EMPRESA]</td>
+          </tr>
+          <tr>
+            <td>Parentesco:</td>
+            <td>[PARENTESCO]</td>
+            <td>Estado Civil:</td>
+            <td>[ESTADO_CIVIL]</td>
+            <td>Edad:</td>
+            <td>[EDAD]</td>
+            <td>Área:</td>
+            <td>[AREA]</td>
+          </tr>
+          <tr>
+            <td>Dpto. Residencia:</td>
+            <td>[DPTO_RESIDENCIA]</td>
+            <td>Dirección:</td>
+            <td colspan="3">[DIRECCION]</td>
+            <td>Cargo:</td>
+            <td>[CARGO]</td>
+          </tr>
+          <tr>
+            <td>Medico Eval:</td>
+            <td colspan="3">[MEDICO_EVAL]</td>
+            <td>C.M.P</td>
+            <td>[C_M_P]</td>
+            <td>TELF_DOMIC</td>
+            <td colspan="2">[TELF_DOMIC]</td>
+          </tr>
+          <tr>
+            <td>Cod. Afiliado:</td>
+            <td>[COD_AFILIADO]</td>
+            <td>Correo electrónico:</td>
+            <td colspan="3">[CORREO_ELECTRONICO]</td>
+            <td>Fecha Eval.:</td>
+            <td colspan="2">[FECHA_EVAL]</td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="1px" class="full-width-table" style="margin-top: 20">
+        <tbody>
+          <tr>
+            <td colspan="9">II. ANTECEDENTES</td>
+          </tr>
+          <tr>
+            <td colspan="9">Antecedentes Patológicos Personales</td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[HTA]" />
+                <label class="custom-checkbox-label" for="[HTA]"></label>
+              </div>
+              <label for="[HTA]">HTA</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[TBC]" />
+                <label class="custom-checkbox-label" for="[TBC]"></label>
+              </div>
+              <label for="[TBC]">TBC</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[INFECCIONES]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[INFECCIONES]"
+                ></label>
+              </div>
+              <label for="[INFECCIONES]">Infecciones</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[CIRUGIAS]" />
+                <label class="custom-checkbox-label" for="[CIRUGIAS]"></label>
+              </div>
+              <label for="[CIRUGIAS]">Cirugías</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[CANCER]" />
+                <label class="custom-checkbox-label" for="[CANCER]"></label>
+              </div>
+              <label for="[CANCER]">Cancer</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[IMA]" />
+                <label class="custom-checkbox-label" for="[IMA]"></label>
+              </div>
+              <label for="[IMA]">IMA</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ASMA]" />
+                <label class="custom-checkbox-label" for="[ASMA]"></label>
+              </div>
+              <label for="[ASMA]">Asma</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[P_COLUMNA]" />
+                <label class="custom-checkbox-label" for="[P_COLUMNA]"></label>
+              </div>
+              <label for="[P_COLUMNA]">P. Columna</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[FRACTURAS]" />
+                <label class="custom-checkbox-label" for="[FRACTURAS]"></label>
+              </div>
+              <label for="[FRACTURAS]">Fracturas</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[HEPATITIS]" />
+                <label class="custom-checkbox-label" for="[HEPATITIS]"></label>
+              </div>
+              <label for="[HEPATITIS]">Hepatitis</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ACV]" />
+                <label class="custom-checkbox-label" for="[ACV]"></label>
+              </div>
+              <label for="[ACV]">ACV</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ALERGIAS]" />
+                <label class="custom-checkbox-label" for="[ALERGIAS]"></label>
+              </div>
+              <label for="[ALERGIAS]">Alergias</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[P_CARDIACO]" />
+                <label class="custom-checkbox-label" for="[P_CARDIACO]"></label>
+              </div>
+              <label for="[P_CARDIACO]">P. Cardiaco</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[PATOLOGIA_OCULAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[PATOLOGIA_OCULAR]"
+                ></label>
+              </div>
+              <label for="[PATOLOGIA_OCULAR]">Patología Ocular</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[OSTEOPOROSIS]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[OSTEOPOROSIS]"
+                ></label>
+              </div>
+              <label for="[OSTEOPOROSIS]">Osteoporosis</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[DISLIPIDEMIA]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[DISLIPIDEMIA]"
+                ></label>
+              </div>
+              <label for="[DISLIPIDEMIA]">Dislipidemia</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[GASTRITIS]" />
+                <label class="custom-checkbox-label" for="[GASTRITIS]"></label>
+              </div>
+              <label for="[GASTRITIS]">Gastritis</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ENF_PIEL]" />
+                <label class="custom-checkbox-label" for="[ENF_PIEL]"></label>
+              </div>
+              <label for="[ENF_PIEL]">Enf. Piel</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[INS_VENOSA_SUPRF]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[INS_VENOSA_SUPRF]"
+                ></label>
+              </div>
+              <label for="[INS_VENOSA_SUPRF]">Ins. Venosa Suprf</label>
+            </td>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[P_TIROIDES]" />
+                <label class="custom-checkbox-label" for="[P_TIROIDES]"></label>
+              </div>
+              <label for="[P_TIROIDES]">P. Tiroides</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[DIABETES]" />
+                <label class="custom-checkbox-label" for="[DIABETES]"></label>
+              </div>
+              <label for="[DIABETES]">Diabetes</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ULCERA]" />
+                <label class="custom-checkbox-label" for="[ULCERA]"></label>
+              </div>
+              <label for="[ULCERA]">Ulcera</label>
+            </td>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[P_OIDO]" />
+                <label class="custom-checkbox-label" for="[P_OIDO]"></label>
+              </div>
+              <label for="[P_OIDO]">P. Oído</label>
+            </td>
+            <td class="void"></td>
+            ( ) Patología Renal void, vacio
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[PATOLOGIA_RENAL]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[PATOLOGIA_RENAL]"
+                ></label>
+              </div>
+              <label for="[PATOLOGIA_RENAL]">Patología Renal</label>
+            </td>
+            <td class="void"></td>
+            <td class="void"></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[USO_MEDICAMENTOS]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[USO_MEDICAMENTOS]"
+                ></label>
+              </div>
+              <label for="[USO_MEDICAMENTOS]">Uso de medicamentos</label>
+            </td>
+            <td colspan="8">[USO_MEDICAMENTOS_DESCRIPCION]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1px" class="full-width-table">
+        <tbody>
+          <tr>
+            <td colspan="1">Hábitos</td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[TABACO]" />
+                <label class="custom-checkbox-label" for="[TABACO]"></label>
+              </div>
+              <label for="[TABACO]">Tabaco</label>
+            </td>
+            <td colspan="7">[TABACO_CANTIDAD]</td>
+          </tr>
+          <tr>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ALCOHOL]" />
+                <label class="custom-checkbox-label" for="[ALCOHOL]"></label>
+              </div>
+              <label for="[ALCOHOL]">Alcohol</label>
+            </td>
+            <td colspan="7">[ALCOHOL_CANTIDAD]</td>
+          </tr>
+          <tr>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[DROGAS]" />
+                <label class="custom-checkbox-label" for="[DROGAS]"></label>
+              </div>
+              <label for="[DROGAS]">Drogas</label>
+            </td>
+            <td colspan="7">[DROGAS_CANTIDAD]</td>
+          </tr>
+          <tr>
+            <td class="void"></td>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ACTIVIDAD_FISICA]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[ACTIVIDAD_FISICA]"
+                ></label>
+              </div>
+              <label for="[ACTIVIDAD_FISICA]">Actividad Física</label>
+            </td>
+            <td colspan="7">[DROGAS_CANTIDAD]</td>
+          </tr>
+          <tr>
+            <td class="observaciones">Observaciones</td>
+            <td class="observaciones" colspan="8">
+              [OBSERVACIONES_ANTECEDENTES]
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="1px" class="full-width-table">
+        <tbody>
+          <tr>
+            <td colspan="8">Antecedentes Patológicos Familiares</td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[HTA_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[HTA_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[HTA_FAMILIAR]">HTA</label>
+            </td>
+            <td colspan="2">[HTA_FAMILIAR]</td>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[ASMA_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[ASMA_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[ASMA_FAMILIAR]">Asma</label>
+            </td>
+            <td colspan="3" style="width: 200px">[ASMA_FAMILIAR]</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[CANCER_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[CANCER_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[CANCER_FAMILIAR]">Cancer</label>
+            </td>
+            <td colspan="2">[CANCER_FAMILIAR]</td>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[TBC_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[TBC_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[TBC_FAMILIAR]">TBC</label>
+            </td>
+            <td colspan="3" style="width: 200px">[TBC_FAMILIAR]</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[DBM_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[DBM_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[DBM_FAMILIAR]">DBM</label>
+            </td>
+            <td colspan="2">[DBM_FAMILIAR]</td>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[DISLIPIDEMIA_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[DISLIPIDEMIA_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[DISLIPIDEMIA_FAMILIAR]">Dislipidemia</label>
+            </td>
+            <td colspan="3" style="width: 200px">[DISLIPIDEMIA_FAMILIAR]</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox-container">
+                <input type="checkbox" id="[IMA_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[IMA_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[IMA_FAMILIAR]">IMA</label>
+            </td>
+            <td colspan="2">[IMA_FAMILIAR]</td>
+            <td class="void"></td>
+            <td colspan="1">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[CARDIO_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[CARDIO_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[CARDIO_FAMILIAR]">Cardio</label>
+            </td>
+            <td colspan="3" style="width: 200px">[CARDIO_FAMILIAR]</td>
+          </tr>
+          <tr>
+            <td colspan="">
+              <div class="checkbox-container">
+                <input type="checkbox" id="[OTROS_FAMILIAR]" />
+                <label
+                  class="custom-checkbox-label"
+                  for="[OTROS_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[OTROS_FAMILIAR]">Otros</label>
+            </td>
+            <td colspan="7" style="width: 200px">[OTROS_FAMILIAR]</td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="1px" class="full-width-table" style="margin-top: 20px">
+        <tbody>
+          <tr>
+            <td>III: ENFERMEDAD ACTUAL</td>
+          </tr>
+          <tr>
+            <td class="observaciones">[OBSERVACIONES_ENFERMEDAD_ACTUAL]</td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="1px" class="full-width-table" style="margin-top: 20px">
+        <tbody>
+          <tr>
+            <td colspan="15">IV: EXAMEN CLÍNICO</td>
+          </tr>
+          <tr>
+            <td>PAS</td>
+            <td>[PAS]</td>
+            <td>mmHg</td>
+            <td>PAD</td>
+            <td>[PAD]</td>
+            <td>mmHg</td>
+            <td>FC</td>
+            <td>[FC]</td>
+            <td>lat/min</td>
+            <td>Peso</td>
+            <td>[PESO]</td>
+            <td>kg</td>
+            <td>Talla</td>
+            <td>[TALLA]</td>
+            <td>m</td>
+          </tr>
+          <tr>
+            <td>FR</td>
+            <td>[FR]</td>
+            <td>resp/min</td>
+            <td>IMC</td>
+            <td>[IMC]</td>
+            <td>kg/m²</td>
+            <td colspan="2">Diag. IMC</td>
+            <td colspan="3">[DIAG_IMC]</td>
+            <td style="width: 60px">P. Cintura (cm)</td>
+            <td colspan="3">[P_CINTURA]</td>
+          </tr>
+          <tr>
+            <td colspan="15">Observaciones</td>
+          </tr>
+          <tr>
+            <td colspan="15" class="observaciones">
+              [OBSERVACIONES_EXAMEN_CLINICO]
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="full-width-table" style="margin-top: 20px">
+        <tbody>
+          <tr>
+            <td colspan="8" style="border: 1px solid #9b9b9b">
+              V. EXAMENES AUXILIARES
+            </td>
+          </tr>
+          <!-- examen orina -->
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              Examen de Orina
+            </td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="EXAMEN_ORINA_NORMAL"
+                  name="examen_orina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="EXAMEN_ORINA_NORMAL"
+                ></label>
+              </div>
+              <label for="EXAMEN_ORINA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="EXAMEN_ORINA_ALTERADO"
+                  name="examen_orina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="EXAMEN_ORINA_ALTERADO"
+                ></label>
+              </div>
+              <label for="EXAMEN_ORINA_ALTERADO">Alterado</label>
+            </td>
+            <td
+              colspan="5"
+              style="max-width: max-content; border: 1px solid #9b9b9b"
+            >
+              [EXAMEN_ORINA]
+            </td>
+          </tr>
+          <!-- hemograma -->
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">HEMOGRAMA</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGRAMA_NORMAL"
+                  name="examen_hemograma"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGRAMA_NORMAL"
+                ></label>
+              </div>
+              <label for="HEMOGRAMA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGRAMA_ALTERADO"
+                  name="examen_hemograma"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGRAMA_ALTERADO"
+                ></label>
+              </div>
+              <label for="HEMOGRAMA_ALTERADO">Alterado</label>
+            </td>
+            <td
+              colspan="5"
+              style="max-width: max-content; border: 1px solid #9b9b9b"
+            >
+              [EXAMEN_HEMOGRAMA]
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">HEMOGLOBINA</td>
+            <td style="border: 1px solid #9b9b9b; width: 150px">
+              [HEMOGLOBINA]
+            </td>
+            <td>g/dL</td>
+
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGLOBINA_NORMAL"
+                  name="examen_hemoglobina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGLOBINA_NORMAL"
+                ></label>
+              </div>
+              <label for="HEMOGLOBINA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGLOBINA_ANEMIA"
+                  name="examen_hemoglobina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGLOBINA_ANEMIA"
+                ></label>
+              </div>
+              <label for="HEMOGLOBINA_ANEMIA">Anemia</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGLOBINA_OTROS_HALLAZGOS"
+                  name="examen_hemoglobina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGLOBINA_OTROS_HALLAZGOS"
+                ></label>
+              </div>
+              <label for="HEMOGLOBINA_OTROS_HALLAZGOS">Otros hallazgos</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">HEMATOCRITO</td>
+            <td style="border: 1px solid #9b9b9b">[HEMATOCRITO]</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              REC. PLAQUETAS
+            </td>
+            <td style="border: 1px solid #9b9b9b">[REC_PLAQUETAS]</td>
+            <td>10³/mm³</td>
+
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_PLAQUETAS_NORMAL"
+                  name="examen_rec_plaquetas"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_PLAQUETAS_NORMAL"
+                ></label>
+              </div>
+              <label for="REC_PLAQUETAS_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_PLAQUETAS_TROMBOCITOSIS"
+                  name="examen_rec_plaquetas"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_PLAQUETAS_TROMBOCITOSIS"
+                ></label>
+              </div>
+              <label for="REC_PLAQUETAS_TROMBOCITOSIS">Trombocitosis</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_PLAQUETAS_TROMBOCITOPENIA"
+                  name="examen_rec_plaquetas"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_PLAQUETAS_TROMBOCITOPENIA"
+                ></label>
+              </div>
+              <label for="REC_PLAQUETAS_TROMBOCITOPENIA">Trombocitopenia</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              REC. LEUCOCITOS
+            </td>
+            <td style="border: 1px solid #9b9b9b">[REC_LEUCOCITOS]</td>
+            <td>10³/mm³</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_LEUCOCITOS_NORMAL"
+                  name="examen_rec_leucocitos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_LEUCOCITOS_NORMAL"
+                ></label>
+              </div>
+              <label for="REC_LEUCOCITOS_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_LEUCOCITOS_LEUCOCITOSIS"
+                  name="examen_rec_leucocitos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_LEUCOCITOS_LEUCOCITOSIS"
+                ></label>
+              </div>
+              <label for="REC_LEUCOCITOS_LEUCOCITOSIS">Leucocitosis</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="REC_LEUCOCITOS_LEUCOPENIA"
+                  name="examen_rec_leucocitos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="REC_LEUCOCITOS_LEUCOPENIA"
+                ></label>
+              </div>
+              <label for="REC_LEUCOCITOS_LEUCOPENIA">Leucopenia</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">GLUCOSA</td>
+            <td style="border: 1px solid #9b9b9b">[GLUCOSA]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="GLUCOSA_NORMAL" name="examen_glucosa" />
+                <label class="custom-radio-label" for="GLUCOSA_NORMAL"></label>
+              </div>
+              <label for="GLUCOSA_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="GLUCOSA_HIPERGLICEMIA"
+                  name="examen_glucosa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="GLUCOSA_HIPERGLICEMIA"
+                ></label>
+              </div>
+              <label for="GLUCOSA_HIPERGLICEMIA">Hiperglicemia</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="GLUCOSA_HIPOGLICEMIA"
+                  name="examen_glucosa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="GLUCOSA_HIPOGLICEMIA"
+                ></label>
+              </div>
+              <label for="GLUCOSA_HIPOGLICEMIA">Hipoglicemia</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              COLESTEROL TOTAL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[COLESTEROL_TOTAL]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_TOTAL_NORMAL"
+                  name="examen_colesterol_total"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_TOTAL_NORMAL"
+                ></label>
+              </div>
+              <label for="COLESTEROL_TOTAL_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_TOTAL_LIMITE_SUPERIOR"
+                  name="examen_colesterol_total"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_TOTAL_LIMITE_SUPERIOR"
+                ></label>
+              </div>
+              <label for="COLESTEROL_TOTAL_LIMITE_SUPERIOR"
+                >En límite superior</label
+              >
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_TOTAL_HIPERCOLESTEROLEMIA"
+                  name="examen_colesterol_total"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_TOTAL_HIPERCOLESTEROLEMIA"
+                ></label>
+              </div>
+              <label for="COLESTEROL_TOTAL_HIPERCOLESTEROLEMIA"
+                >Hipercolesterolemia</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              TRIGLICERIDOS
+            </td>
+            <td style="border: 1px solid #9b9b9b">[TRIGLICERIDOS]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TRIGLICERIDOS_NORMAL"
+                  name="examen_trigliceridos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TRIGLICERIDOS_NORMAL"
+                ></label>
+              </div>
+              <label for="TRIGLICERIDOS_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TRIGLICERIDOS_LIMITE_SUPERIOR"
+                  name="examen_trigliceridos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TRIGLICERIDOS_LIMITE_SUPERIOR"
+                ></label>
+              </div>
+              <label for="TRIGLICERIDOS_LIMITE_SUPERIOR"
+                >En límite superior</label
+              >
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TRIGLICERIDOS_HIPERCOLESTEROLEMIA"
+                  name="examen_trigliceridos"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TRIGLICERIDOS_HIPERCOLESTEROLEMIA"
+                ></label>
+              </div>
+              <label for="TRIGLICERIDOS_HIPERCOLESTEROLEMIA"
+                >Hipertrigliceridemia</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              COLESTEROL HDL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[COLESTEROL_HDL]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_HDL_NORMAL"
+                  name="examen_colesterol_hdl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_HDL_NORMAL"
+                ></label>
+              </div>
+              <label for="COLESTEROL_HDL_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_HDL_ALTERADO"
+                  name="examen_colesterol_hdl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_HDL_ALTERADO"
+                ></label>
+              </div>
+              <label for="COLESTEROL_HDL_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              COLESTEROL LDL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[COLESTEROL_LDL]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_LDL_NORMAL"
+                  name="examen_colesterol_ldl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_LDL_NORMAL"
+                ></label>
+              </div>
+              <label for="COLESTEROL_LDL_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_LDL_ALTERADO"
+                  name="examen_colesterol_ldl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_LDL_ALTERADO"
+                ></label>
+              </div>
+              <label for="COLESTEROL_LDL_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              COLESTEROL VLDL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[COLESTEROL_VLDL]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_VLDL_NORMAL"
+                  name="examen_colesterol_vldl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_VLDL_NORMAL"
+                ></label>
+              </div>
+              <label for="COLESTEROL_VLDL_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="COLESTEROL_VLDL_ALTERADO"
+                  name="examen_colesterol_vldl"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="COLESTEROL_VLDL_ALTERADO"
+                ></label>
+              </div>
+              <label for="COLESTEROL_VLDL_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">ÁCIDO URICO</td>
+            <td style="border: 1px solid #9b9b9b">[ACIDO_URICO]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="ACIDO_URICO_NORMAL"
+                  name="examen_acido_urico"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="ACIDO_URICO_NORMAL"
+                ></label>
+              </div>
+              <label for="ACIDO_URICO_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="ACIDO_URICO_ALTERADO"
+                  name="examen_acido_urico"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="ACIDO_URICO_ALTERADO"
+                ></label>
+              </div>
+              <label for="ACIDO_URICO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">UREA</td>
+            <td style="border: 1px solid #9b9b9b">[UREA]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="UREA_NORMAL" name="examen_urea" />
+                <label class="custom-radio-label" for="UREA_NORMAL"></label>
+              </div>
+              <label for="UREA_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="UREA_ALTERADO" name="examen_urea" />
+                <label class="custom-radio-label" for="UREA_ALTERADO"></label>
+              </div>
+              <label for="UREA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">CREATININA</td>
+            <td style="border: 1px solid #9b9b9b">[CREATININA]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="CREATININA_NORMAL"
+                  name="examen_creatinina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="CREATININA_NORMAL"
+                ></label>
+              </div>
+              <label for="CREATININA_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="CREATININA_ALTERADO"
+                  name="examen_creatinina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="CREATININA_ALTERADO"
+                ></label>
+              </div>
+              <label for="CREATININA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">TGO</td>
+            <td style="border: 1px solid #9b9b9b">[TGO]</td>
+            <td>U/L</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="TGO_NORMAL" name="examen_tgo" />
+                <label class="custom-radio-label" for="TGO_NORMAL"></label>
+              </div>
+              <label for="TGO_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="TGO_ALTERADO" name="examen_tgo" />
+                <label class="custom-radio-label" for="TGO_ALTERADO"></label>
+              </div>
+              <label for="TGO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">TGP</td>
+            <td style="border: 1px solid #9b9b9b">[TGP]</td>
+            <td>U/L</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="TGP_NORMAL" name="examen_tgp" />
+                <label class="custom-radio-label" for="TGP_NORMAL"></label>
+              </div>
+              <label for="TGP_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="TGP_ALTERADO" name="examen_tgp" />
+                <label class="custom-radio-label" for="TGP_ALTERADO"></label>
+              </div>
+              <label for="TGP_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">TSH</td>
+            <td style="border: 1px solid #9b9b9b">[TSH]</td>
+            <td>uIU/ml</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="TSH_NORMAL" name="examen_tgh" />
+                <label class="custom-radio-label" for="TSH_NORMAL"></label>
+              </div>
+              <label for="TSH_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="TSH_ALTERADO" name="examen_tgh" />
+                <label class="custom-radio-label" for="TSH_ALTERADO"></label>
+              </div>
+              <label for="TSH_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">T4 LIBRE</td>
+            <td style="border: 1px solid #9b9b9b">[T4_LIBRE]</td>
+            <td>ng/dL</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T4_LIBRE_NORMAL"
+                  name="examen_t4_libre"
+                />
+                <label class="custom-radio-label" for="T4_LIBRE_NORMAL"></label>
+              </div>
+              <label for="T4_LIBRE_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T4_LIBRE_ALTERADO"
+                  name="examen_t4_libre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="T4_LIBRE_ALTERADO"
+                ></label>
+              </div>
+              <label for="T4_LIBRE_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">T3 LIBRE</td>
+            <td style="border: 1px solid #9b9b9b">[T3_LIBRE]</td>
+            <td>pg/ml</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T3_LIBRE_NORMAL"
+                  name="examen_t3_libre"
+                />
+                <label class="custom-radio-label" for="T3_LIBRE_NORMAL"></label>
+              </div>
+              <label for="T3_LIBRE_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T3_LIBRE_ALTERADO"
+                  name="examen_t3_libre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="T3_LIBRE_ALTERADO"
+                ></label>
+              </div>
+              <label for="T3_LIBRE_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">HIV</td>
+            <td style="border: 1px solid #9b9b9b">[HIV]</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="HIV_NO_REACTIVO" name="examen_hiv" />
+                <label class="custom-radio-label" for="HIV_NO_REACTIVO"></label>
+              </div>
+              <label for="HIV_NO_REACTIVO">No Reactivo</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="HIV_REACTIVO" name="examen_hiv" />
+                <label class="custom-radio-label" for="HIV_REACTIVO"></label>
+              </div>
+              <label for="HIV_REACTIVO">Reactivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              SEROLOGICO (RPR) "SIFILIS"
+            </td>
+            <td style="border: 1px solid #9b9b9b">[SEROLOGICO_RPR]</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="SEROLOGICO_RPR_NO_REACTIVO"
+                  name="examen_sifilis"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="SEROLOGICO_RPR_NO_REACTIVO"
+                ></label>
+              </div>
+              <label for="SEROLOGICO_RPR_NO_REACTIVO">No Reactivo</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="SEROLOGICO_RPR_REACTIVO"
+                  name="examen_sifilis"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="SEROLOGICO_RPR_REACTIVO"
+                ></label>
+              </div>
+              <label for="SEROLOGICO_RPR_REACTIVO">Reactivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              HCG SUBUNIDAD BETA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[HCG_SUBUNIDAD_BETA]</td>
+            <td>uIU/ml</td>
+          </tr>
+          PSA ng/ml ( ) Normal ( ) Alterado
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">PSA</td>
+            <td style="border: 1px solid #9b9b9b">[PSA_LIBRE]</td>
+            <td>pg/ml</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T3_LIBRE_NORMAL"
+                  name="examen_t3_libre"
+                />
+                <label class="custom-radio-label" for="T3_LIBRE_NORMAL"></label>
+              </div>
+              <label for="T3_LIBRE_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="T3_LIBRE_ALTERADO"
+                  name="examen_t3_libre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="T3_LIBRE_ALTERADO"
+                ></label>
+              </div>
+              <label for="T3_LIBRE_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
