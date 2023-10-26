@@ -1460,36 +1460,292 @@
             <td style="border: 1px solid #9b9b9b">[HCG_SUBUNIDAD_BETA]</td>
             <td>uIU/ml</td>
           </tr>
-          PSA ng/ml ( ) Normal ( ) Alterado
           <tr>
             <td style="border: 1px solid #9b9b9b; width: 200px">PSA</td>
-            <td style="border: 1px solid #9b9b9b">[PSA_LIBRE]</td>
+            <td style="border: 1px solid #9b9b9b">[PSA]</td>
             <td>pg/ml</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input type="radio" id="PSA_NORMAL" name="examen_psa" />
+                <label class="custom-radio-label" for="PSA_NORMAL"></label>
+              </div>
+              <label for="PSA_NORMAL">Normal</label>
+            </td>
+
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="PSA_ALTERADO" name="examen_psa" />
+                <label class="custom-radio-label" for="PSA_ALTERADO"></label>
+              </div>
+              <label for="PSA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">THEVENON</td>
+            <td style="border: 1px solid #9b9b9b">[THEVENON]</td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="THEVENON_NEGATIVO"
+                  name="examen_thevenom"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="THEVENON_NEGATIVO"
+                ></label>
+              </div>
+              <label for="THEVENON_NEGATIVO">Negativo</label>
+            </td>
             <td colspan="1" style="width: 120px; padding-left: 20px">
               <div class="radio-container">
                 <input
                   type="radio"
-                  id="T3_LIBRE_NORMAL"
-                  name="examen_t3_libre"
+                  id="THEVENON_TRAZAS"
+                  name="examen_thevenom"
                 />
-                <label class="custom-radio-label" for="T3_LIBRE_NORMAL"></label>
+                <label class="custom-radio-label" for="THEVENON_TRAZAS"></label>
               </div>
-              <label for="T3_LIBRE_NORMAL">Normal</label>
+              <label for="THEVENON_TRAZAS">Trazas</label>
             </td>
 
             <td colspan="1" style="width: 120px">
               <div class="radio-container">
                 <input
                   type="radio"
-                  id="T3_LIBRE_ALTERADO"
-                  name="examen_t3_libre"
+                  id="THEVENON_POSITIVO"
+                  name="examen_thevenom"
                 />
                 <label
                   class="custom-radio-label"
-                  for="T3_LIBRE_ALTERADO"
+                  for="THEVENON_POSITIVO"
                 ></label>
               </div>
-              <label for="T3_LIBRE_ALTERADO">Alterado</label>
+              <label for="THEVENON_POSITIVO">Positivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              GRUPO SANGUINEO Y RH
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GRUPO_SANGUINEO]</td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              VELOC. DE SEDIMENT. (VSG)
+            </td>
+            <td style="border: 1px solid #9b9b9b">[VELOC_SEDIMENT]</td>
+            <td>mm/h</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="VELOC_SEDIMENT_NORMAL"
+                  name="examen_veloc_sediment"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="VELOC_SEDIMENT_NORMAL"
+                ></label>
+              </div>
+              <label for="VELOC_SEDIMENT_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="VELOC_SEDIMENT_ALTERADO"
+                  name="examen_veloc_sediment"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="VELOC_SEDIMENT_ALTERADO"
+                ></label>
+              </div>
+              <label for="VELOC_SEDIMENT_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              TIEMPO DE SANGRIA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[TIEMPO_SANGRIA]</td>
+            <td>Min. Seg</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TIEMPO_SANGRIA_NORMAL"
+                  name="examen_tiempo_sangria"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TIEMPO_SANGRIA_NORMAL"
+                ></label>
+              </div>
+              <label for="TIEMPO_SANGRIA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TIEMPO_SANGRIA_ALTERADO"
+                  name="examen_tiempo_sangria"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TIEMPO_SANGRIA_ALTERADO"
+                ></label>
+              </div>
+              <label for="TIEMPO_SANGRIA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              TIEMPO DE COAGULACION
+            </td>
+            <td style="border: 1px solid #9b9b9b">[TIEMPO_COAGULACION]</td>
+            <td>Min. Seg</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TIEMPO_COAGULACION_NORMAL"
+                  name="examen_tiempo_coagulacion"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TIEMPO_COAGULACION_NORMAL"
+                ></label>
+              </div>
+              <label for="TIEMPO_COAGULACION_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TIEMPO_COAGULACION_ALTERADO"
+                  name="examen_tiempo_coagulacion"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TIEMPO_COAGULACION_ALTERADO"
+                ></label>
+              </div>
+              <label for="TIEMPO_COAGULACION_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              PARASITOLOGICO SERIADO
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SERIADO_NEGATIVO"
+                  name="examen_parasitologico_seriado"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SERIADO_NEGATIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SERIADO_NEGATIVO">NEGATIVO</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SERIADO_POSITIVO"
+                  name="examen_parasitologico_seriado"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SERIADO_POSITIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SERIADO_POSITIVO">POSITIVO</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">
+              [PARASITOLOGICO_SERIADO]
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              PARASITOLOGICO SIMPLE
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SIMPLE_NEGATIVO"
+                  name="examen_parasitologico_simple"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SIMPLE_NEGATIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SIMPLE_NEGATIVO">NEGATIVO</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SIMPLE_POSITIVO"
+                  name="examen_parasitologico_simple"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SIMPLE_POSITIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SIMPLE_POSITIVO">POSITIVO</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">
+              [PARASITOLOGICO_SERIADO]
+            </td>
+          </tr>
+          COPROCULTIVO ( ) NEGATIVO ( ) POSITIVO
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              COPROCULTIVO
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SIMPLE_NEGATIVO"
+                  name="examen_parasitologico_simple"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SIMPLE_NEGATIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SIMPLE_NEGATIVO">NEGATIVO</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PARASITOLOGICO_SIMPLE_POSITIVO"
+                  name="examen_parasitologico_simple"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PARASITOLOGICO_SIMPLE_POSITIVO"
+                ></label>
+              </div>
+              <label for="PARASITOLOGICO_SIMPLE_POSITIVO">POSITIVO</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">
+              [COPROCULTIVO]
             </td>
           </tr>
         </tbody>
