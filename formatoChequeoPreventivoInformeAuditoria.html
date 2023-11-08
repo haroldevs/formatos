@@ -43,6 +43,9 @@
         padding-bottom: 8px;
         padding-left: 4px;
       }
+      .nombre-largo {
+        white-space: normal;
+      }
 
       /* Estilos para el checkbox personalizado */
       .checkbox-container {
@@ -141,6 +144,68 @@
       }
       .tdAntecedentes {
         width: 100px;
+      }
+      .table {
+        margin: 8px 0;
+        border-collapse: collapse;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        width: 100%;
+      }
+
+      .container2 {
+        display: grid;
+        grid-template-columns: 40px 95px 1fr 60px 60px 60px;
+        width: 100%;
+      }
+      .container3 {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        width: 100%;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-left {
+        text-align: left;
+      }
+
+      .border {
+        border: 1px solid #000;
+      }
+      .paddingContainer {
+        padding: 4px 6px;
+      }
+      .border-right {
+        border-right: 1px solid #000;
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #000;
+      }
+
+      .white-space {
+        white-space: nowrap;
+      }
+      .flex {
+        display: flex;
+        gap: 4px;
+      }
+      .titulo {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        padding: 4px 6px;
+        font-weight: 700;
+        background-color: rgb(238, 238, 238);
+      }
+      .firma {
+        border-top: 1px solid #000;
+        width: 340px;
+        margin-top: 100px;
+        text-align: center;
+        padding-top: 20px;
       }
     </style>
   </head>
@@ -726,7 +791,7 @@
               <label for="EXAMEN_ORINA_ALTERADO">Alterado</label>
             </td>
             <td
-              colspan="5"
+              colspan="3"
               style="max-width: max-content; border: 1px solid #9b9b9b"
             >
               [EXAMEN_ORINA]
@@ -764,7 +829,7 @@
               <label for="HEMOGRAMA_ALTERADO">Alterado</label>
             </td>
             <td
-              colspan="5"
+              colspan="3"
               style="max-width: max-content; border: 1px solid #9b9b9b"
             >
               [EXAMEN_HEMOGRAMA]
@@ -1711,7 +1776,6 @@
               [PARASITOLOGICO_SERIADO]
             </td>
           </tr>
-          COPROCULTIVO ( ) NEGATIVO ( ) POSITIVO
           <tr>
             <td style="border: 1px solid #9b9b9b; width: 200px">
               COPROCULTIVO
@@ -1748,8 +1812,1200 @@
               [COPROCULTIVO]
             </td>
           </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              PAPILOMAVIRUS GENOTIPIFICACION
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PAPILOMAVIRUS_GENOTIPIFICACION_NEGATIVO"
+                  name="examen_papilomavirus_genotipificacion"
+                />
+                <label
+                  class="custom-radio-label"
+                  for=" PAPILOMAVIRUS_GENOTIPIFICACION_NEGATIVO"
+                ></label>
+              </div>
+              <label for="PAPILOMAVIRUS_GENOTIPIFICACION_NEGATIVO"
+                >NEGATIVO</label
+              >
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PAPILOMAVIRUS_GENOTIPIFICACION_POSITIVO"
+                  name="examen_papilomavirus_genotipificacion"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PAPILOMAVIRUS_GENOTIPIFICACION_POSITIVO"
+                ></label>
+              </div>
+              <label for="PAPILOMAVIRUS_GENOTIPIFICACION_POSITIVO"
+                >POSITIVO</label
+              >
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">
+              [PAPILOMAVIRUS_GENOTIPIFICACION]
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              FACTOR REUMATOIDE
+            </td>
+            <td style="border: 1px solid #9b9b9b">[FACTOR_REUMATOIDE]</td>
+            <td>UI/mL</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FACTOR_REUMATOIDE_NORMAL"
+                  name="examen_factor_reumatoide"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FACTOR_REUMATOIDE_NORMAL"
+                ></label>
+              </div>
+              <label for="FACTOR_REUMATOIDE_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FACTOR_REUMATOIDE_ALTERADO"
+                  name="examen_factor_reumatoide"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FACTOR_REUMATOIDE_ALTERADO"
+                ></label>
+              </div>
+              <label for="FACTOR_REUMATOIDE_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">FENOMENO LE</td>
+            <td style="border: 1px solid #9b9b9b">[FENOMENO_LE]</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FENOMENO_LE_NEGATIVO"
+                  name="examen_fenomeno_le"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FENOMENO_LE_NEGATIVO"
+                ></label>
+              </div>
+              <label for="FENOMENO_LE_NEGATIVO">Negativo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FENOMENO_LE_POSITIVO"
+                  name="examen_fenomeno_le"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FENOMENO_LE_POSITIVO"
+                ></label>
+              </div>
+              <label for="FENOMENO_LE_POSITIVO">Positivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              HEPATITIS B (HBsAb)
+            </td>
+            <td style="border: 1px solid #9b9b9b">[HEPATITIS_B]</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEPATITIS_B_NO_REACTIVO"
+                  name="examen_hepatitis_b"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEPATITIS_B_NO_REACTIVO"
+                ></label>
+              </div>
+              <label for="HEPATITIS_B_NO_REACTIVO">No Reactivo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEPATITIS_B_REACTIVO"
+                  name="examen_hepatitis_b"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEPATITIS_B_REACTIVO"
+                ></label>
+              </div>
+              <label for="HEPATITIS_B_REACTIVO">Reactivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #9b9b9b; width: 200px">
+              HEPATITIS C (AC.TOTALES)
+            </td>
+            <td style="border: 1px solid #9b9b9b">[HEPATITIS_C]</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEPATITIS_C_NO_REACTIVO"
+                  name="examen_hepatitis_c"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEPATITIS_C_NO_REACTIVO"
+                ></label>
+              </div>
+              <label for="HEPATITIS_C_NO_REACTIVO">No Reactivo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEPATITIS_C_REACTIVO"
+                  name="examen_hepatitis_c"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEPATITIS_C_REACTIVO"
+                ></label>
+              </div>
+              <label for="HEPATITIS_C_REACTIVO">Reactivo</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              HEMOGLOBINA GLICOSILADA (HbA1c)
+            </td>
+            <td style="border: 1px solid #9b9b9b">[HEMOGLOBINA_GLICOSILADA]</td>
+            <td>%</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGLOBINA_GLICOSILADA_NORMAL"
+                  name="examen_glicosilada"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGLOBINA_GLICOSILADA_NORMAL"
+                ></label>
+              </div>
+              <label for="HEMOGLOBINA_GLICOSILADA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="HEMOGLOBINA_GLICOSILADA_ALTERADO"
+                  name="examen_glicosilada"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="HEMOGLOBINA_GLICOSILADA_ALTERADO"
+                ></label>
+              </div>
+              <label for="HEMOGLOBINA_GLICOSILADA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              TEST DE TOLERANCIA A GLUCOSA
+            </td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TOLERACION_GLUCOSA_NORMAL"
+                  name="examen_tolerancia_glucosa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TOLERACION_GLUCOSA_NORMAL"
+                ></label>
+              </div>
+              <label for="TOLERACION_GLUCOSA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="TOLERACION_GLUCOSA_ALTERADO"
+                  name="examen_tolerancia_glucosa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="TOLERACION_GLUCOSA_ALTERADO"
+                ></label>
+              </div>
+              <label for="TOLERACION_GLUCOSA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              GLUCOSA BASAL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GLUCOSA_BASAL]</td>
+            <td>mg/dl</td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              GLUCOSA 30 MIN
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GLUCOSA_30_MIN]</td>
+            <td>mg/dl</td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              GLUCOSA 60 MIN
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GLUCOSA_60_MIN]</td>
+            <td>mg/dl</td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              GLUCOSA 120 MIN
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GLUCOSA_120_MIN]</td>
+            <td>mg/dl</td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              PROTEINAS TOTALES
+            </td>
+            <td style="border: 1px solid #9b9b9b">[PROTEINAS_TOTALES]</td>
+            <td>g/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PROTEINAS_TOTALES_NORMAL"
+                  name="examen_proteinas_totales"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PROTEINAS_TOTALES_NORMAL"
+                ></label>
+              </div>
+              <label for="PROTEINAS_TOTALES_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PROTEINAS_TOTALES_ALTERADO"
+                  name="examen_proteinas_totales"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PROTEINAS_TOTALES_ALTERADO"
+                ></label>
+              </div>
+              <label for="PROTEINAS_TOTALES_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              ALBUMINA SERICA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[ALBUMINA_SERICA]</td>
+            <td>g/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="ALBUMINA_SERICA_NORMAL"
+                  name="examen_albumina_serica"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="ALBUMINA_SERICA_NORMAL"
+                ></label>
+              </div>
+              <label for="ALBUMINA_SERICA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="ALBUMINA_SERICA_ALTERADO"
+                  name="examen_albumina_serica"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="ALBUMINA_SERICA_ALTERADO"
+                ></label>
+              </div>
+              <label for="ALBUMINA_SERICA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              GLOBULINA SERICA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[GLOBULINA_SERICA]</td>
+            <td>g/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="GLOBULINA_SERICA_NORMAL"
+                  name="examen_globulina_serica"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="GLOBULINA_SERICA_NORMAL"
+                ></label>
+              </div>
+              <label for="GLOBULINA_SERICA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="GLOBULINA_SERICA_ALTERADO"
+                  name="examen_globulina_serica"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="GLOBULINA_SERICA_ALTERADO"
+                ></label>
+              </div>
+              <label for="GLOBULINA_SERICA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              BILIRRUBINA TOTAL
+            </td>
+            <td style="border: 1px solid #9b9b9b">[BILIRRUBINA_TOTAL]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_TOTAL_NORMAL"
+                  name="examen_bilirrubina_total"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_TOTAL_NORMAL"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_TOTAL_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_TOTAL_ALTERADO"
+                  name="examen_bilirrubina_total"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_TOTAL_ALTERADO"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_TOTAL_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              BILIRRUBINA DIRECTA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[BILIRRUBINA_DIRECTA]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_DIRECTA_NORMAL"
+                  name="examen_bilirrubina_directa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_DIRECTA_NORMAL"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_DIRECTA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_DIRECTA_ALTERADO"
+                  name="examen_bilirrubina_directa"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_DIRECTA_ALTERADO"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_DIRECTA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              BILIRRUBINA INDIRECTA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[BILIRRUBINA_INDIRECTA]</td>
+            <td>mg/dl</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_INDIRECTA_NORMAL"
+                  name="examen_bilirrubina_indirecta"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_INDIRECTA_NORMAL"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_INDIRECTA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BILIRRUBINA_INDIRECTA_ALTERADO"
+                  name="examen_bilirrubina_indirecta"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BILIRRUBINA_INDIRECTA_ALTERADO"
+                ></label>
+              </div>
+              <label for="BILIRRUBINA_INDIRECTA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              FOSFATASA ALCALINA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[FOSFATASA_ALCALINA]</td>
+            <td>U/L</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FOSFATASA_ALCALINA_NORMAL"
+                  name="examen_fosfatasa_alcalina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FOSFATASA_ALCALINA_NORMAL"
+                ></label>
+              </div>
+              <label for="FOSFATASA_ALCALINA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="FOSFATASA_ALCALINA_ALTERADO"
+                  name="examen_fosfatasa_alcalina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="FOSFATASA_ALCALINA_ALTERADO"
+                ></label>
+              </div>
+              <label for="FOSFATASA_ALCALINA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              PROTEINA C REACTIVA (PCR)
+            </td>
+            <td style="border: 1px solid #9b9b9b">[PROTEINA_C_REACTIVA]</td>
+            <td>mg/L</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PROTEINA_C_REACTIVA_NORMAL"
+                  name="examen_proteinca_c_reactiva"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PROTEINA_C_REACTIVA_NORMAL"
+                ></label>
+              </div>
+              <label for="PROTEINA_C_REACTIVA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="PROTEINA_C_REACTIVA_ALTERADO"
+                  name="examen_proteinca_c_reactiva"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="PROTEINA_C_REACTIVA_ALTERADO"
+                ></label>
+              </div>
+              <label for="PROTEINA_C_REACTIVA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              B12 VITAMINA
+            </td>
+            <td style="border: 1px solid #9b9b9b">[B12_VITAMINA]</td>
+            <td>pg/ml</td>
+            <td colspan="1" style="width: 120px; padding-left: 20px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="B12_VITAMINA_NORMAL"
+                  name="examen_b12_vitamina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="B12_VITAMINA_NORMAL"
+                ></label>
+              </div>
+              <label for="B12_VITAMINA_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="B12_VITAMINA_ALTERADO"
+                  name="examen_b12_vitamina"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="B12_VITAMINA_ALTERADO"
+                ></label>
+              </div>
+              <label for="B12_VITAMINA_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              OXIUROS (TEST DE GRAHAM)
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="OXIUROS_NEGATIVO"
+                  name="examen_oxiuros"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="OXIUROS_NEGATIVO"
+                ></label>
+              </div>
+              <label for="OXIUROS_NEGATIVO">Negativo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="OXIUROS_POSITIVO"
+                  name="examen_oxiuros"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="OXIUROS_POSITIVO"
+                ></label>
+              </div>
+              <label for="OXIUROS_POSITIVO">Positivo</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">[OXIUROS]</td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              CULTIVO DE SECRECION VAGINAL
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="CULTIVO_SECRECION_VAGINAL_NEGATIVO"
+                  name="examen_cultivo_secrecion_vaginal"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="CULTIVO_SECRECION_VAGINAL_NEGATIVO"
+                ></label>
+              </div>
+              <label for="CULTIVO_SECRECION_VAGINAL_NEGATIVO">Negativo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="CULTIVO_SECRECION_VAGINAL_POSITIVO"
+                  name="examen_cultivo_secrecion_vaginal"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="CULTIVO_SECRECION_VAGINAL_POSITIVO"
+                ></label>
+              </div>
+              <label for="CULTIVO_SECRECION_VAGINAL_POSITIVO">Positivo</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">
+              [CULTIVO_SECRECION_VAGINAL]
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              BK EN ESPUTO
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BK_ESPUTO_NEGATIVO"
+                  name="examen_bk_esputo"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BK_ESPUTO_NEGATIVO"
+                ></label>
+              </div>
+              <label for="BK_ESPUTO_NEGATIVO">Negativo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="BK_ESPUTO_POSITIVO"
+                  name="examen_bk_esputo"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="BK_ESPUTO_POSITIVO"
+                ></label>
+              </div>
+              <label for="BK_ESPUTO_POSITIVO">Positivo</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">[BK_ESPUTO]</td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              KOH
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="KOH_NEGATIVO" name="examen_koh" />
+                <label class="custom-radio-label" for="KOH_NEGATIVO"></label>
+              </div>
+              <label for="KOH_NEGATIVO">Negativo</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input type="radio" id="KOH_POSITIVO" name="examen_koh" />
+                <label class="custom-radio-label" for="KOH_POSITIVO"></label>
+              </div>
+              <label for="KOH_POSITIVO">Positivo</label>
+            </td>
+            <td style="border: 1px solid #9b9b9b" colspan="3">[KOH]</td>
+          </tr>
+
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              DOSAJE ARSENICO EN SANGRE
+            </td>
+            <td>ug/L</td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_ARSENICO_NORMAL"
+                  name="examen_arsenico_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_ARSENICO_NORMAL"
+                ></label>
+              </div>
+              <label for="DOSAJE_ARSENICO_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_ARSENICO_ALTERADO"
+                  name="examen_arsenico_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_ARSENICO_ALTERADO"
+                ></label>
+              </div>
+              <label for="DOSAJE_ARSENICO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              DOSAJE PLOMO EN SANGRE
+            </td>
+            <td>ug/L</td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_PLOMO_NORMAL"
+                  name="examen_plomo_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_PLOMO_NORMAL"
+                ></label>
+              </div>
+              <label for="DOSAJE_PLOMO_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_PLOMO_ALTERADO"
+                  name="examen_plomo_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_PLOMO_ALTERADO"
+                ></label>
+              </div>
+              <label for="DOSAJE_PLOMO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              DOSAJE MERCURIO EN SANGRE
+            </td>
+            <td>ug/L</td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_MERCURIO_NORMAL"
+                  name="examen_mercurio_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_MERCURIO_NORMAL"
+                ></label>
+              </div>
+              <label for="DOSAJE_MERCURIO_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_MERCURIO_ALTERADO"
+                  name="examen_mercurio_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_MERCURIO_ALTERADO"
+                ></label>
+              </div>
+              <label for="DOSAJE_MERCURIO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              DOSAJE CADMIO EN EN SANGRE
+            </td>
+            <td>ug/L</td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_CADMIO_NORMAL"
+                  name="examen_cadmio_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_CADMIO_NORMAL"
+                ></label>
+              </div>
+              <label for="DOSAJE_CADMIO_NORMAL">Normal</label>
+            </td>
+            <td colspan="1" style="width: 120px">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="DOSAJE_CADMIO_ALTERADO"
+                  name="examen_cadmio_sangre"
+                />
+                <label
+                  class="custom-radio-label"
+                  for="DOSAJE_CADMIO_ALTERADO"
+                ></label>
+              </div>
+              <label for="DOSAJE_CADMIO_ALTERADO">Alterado</label>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              TOXICOLOGICOS
+            </td>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b"
+              colspan="5"
+            >
+              [TOXICOLOGICOS]
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; width: 200px"
+            >
+              OTROS:
+            </td>
+            <td
+              class="nombre-largo"
+              style="border: 1px solid #9b9b9b; height: 70px"
+              colspan="5"
+            >
+              [OTROS]
+            </td>
+          </tr>
         </tbody>
       </table>
+
+      <section class="table">
+        <div class="titulo">VI. EVALUACIONES AUXILIARES</div>
+        <div class="container">
+          <div class="border paddingContainer">COLONOSCOPIA</div>
+          <div class="border paddingContainer">[COLONOSCOPIA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">ENDOSCOPIA</div>
+          <div class="border paddingContainer">[ENDOSCOPIA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">ALTA</div>
+          <div class="border paddingContainer">[ALTA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">DENSITOMETRIA</div>
+          <div class="border paddingContainer">[DENSITOMETRIA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">RADIOGRAFIA DE TORAX</div>
+          <div class="border paddingContainer">[RADIOGRAFIA_TORAX]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">ELECTROCARDIOGRAMA</div>
+          <div class="border paddingContainer">[ELECTROCARDIOGRAMA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">PRUEBA ESFUERZO</div>
+          <div class="border paddingContainer">[PRUEBA_ESFUERZO]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">ECOGRAFÍA ABDOMINAL</div>
+          <div class="border paddingContainer">[ECOGRAFIA_ABDOMINAL]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">AUDIOMETRIA</div>
+          <div class="border paddingContainer">[AUDIOMETRIA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">ESPIROMETRIA</div>
+          <div class="border paddingContainer">[ESPIROMETRIA]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">OFTALMOLOGÍA</div>
+          <div class="border">
+            <div class="border-bottom paddingContainer">[OFTALMOLOGIA]</div>
+            <div style="display: flex">
+              <div class="border-right paddingContainer white-space">
+                FO DERECHO
+              </div>
+              <div class="border-right paddingContainer">[FO_DERECHO]</div>
+              <div class="border-right paddingContainer white-space">
+                FO IZQUIERDO
+              </div>
+              <div class="border-right paddingContainer">[FO_IZQUIERDO]</div>
+              <div class="paddingContainer" style="width: 100%">
+                [FO_DETALLE]
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">ODONTOLOGIA</div>
+          <div class="border paddingContainer">[ODONTOLOGIA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">PSICOLOGIA</div>
+          <div class="border paddingContainer">[PSICOLOGIA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">MUSCULOESQUELETICO</div>
+          <div class="border paddingContainer">[MUSCULOESQUELETICO]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">ANALISIS POSTURAL ESTATICO</div>
+          <div class="border paddingContainer">
+            [ANALISIS_POSTURAL_ESTATICO]
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">
+            CONSEJERIA PLANIFICACION FAMILIAR
+          </div>
+          <div class="border paddingContainer flex">
+            <div>Se Realizó:</div>
+            <div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="[CONSEJERIA_PLANIFICACION_FAMILIAR]"
+                />
+                <label
+                  class="custom-checkbox-label"
+                  for="[CONSEJERIA_PLANIFICACION_FAMILIAR]"
+                ></label>
+              </div>
+              <label for="[CONSEJERIA_PLANIFICACION_FAMILIAR]">Sí</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">ALTURA ESTRUCTURAL 1.8 mt</div>
+          <div class="border paddingContainer">[ALTURA_ESTRUCTURAL_1_8]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">ESPACIOS CONFINADOS</div>
+          <div class="border paddingContainer">[ESPACIOS_CONFINADOS]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">PSICOSENSOMETRICO</div>
+          <div class="border paddingContainer">[PSICOSENSOMETRICO]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">
+            ASCENSO ALTITUDES (>2500msnm)
+          </div>
+          <div class="border paddingContainer">[ASCENSO_ALTITUDES]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">SCREENING DERMATOLOGICO</div>
+          <div class="border paddingContainer">[SCREENING_DERMATOLOGICO]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">ELECTROENCEFALOGRAMA</div>
+          <div class="border paddingContainer">[ELECTROENCEFALOGRAMA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">CONSULTA CARDIOLOGICA</div>
+          <div class="border paddingContainer">[CONSULTA_CARDIOLOGICA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">CONSULTA NEUROLOGICA</div>
+          <div class="border paddingContainer">[CONSULTA_NEUROLOGICA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">CONSULTA GINECOLOGICA</div>
+          <div class="border paddingContainer">[CONSULTA_GINECOLOGICA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">CONSULTA UROLOGICA</div>
+          <div class="border paddingContainer">[CONSULTA_UROLOGICA]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">OTRAS RADIOGRAFIAS</div>
+          <div class="border paddingContainer">[OTRAS_RADIOGRAFIAS]</div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">OTRAS ECOGRAFIAS</div>
+          <div class="border paddingContainer">[OTRAS_ECOGRAFIAS]</div>
+        </div>
+
+        <div class="container" style="height: 60px">
+          <div class="border paddingContainer">OTROS:</div>
+          <div class="border paddingContainer">[OTRAS_ECOGRAFIAS]</div>
+        </div>
+      </section>
+      <section class="table">
+        <div class="titulo">VII. FACTORES DE RIESGO</div>
+        <div class="container">
+          <div class="border paddingContainer">Act. Física:</div>
+          <div class="border flex">
+            <div class="border-right paddingContainer" style="width: 100%">
+              [ACT_FISICA]
+            </div>
+            <div class="border-right paddingContainer">Sobrepeso</div>
+            <div class="border-right paddingContainer" style="width: 100%">
+              [SOBREPESO]
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">Habito Nocivo:</div>
+          <div class="border flex">
+            <div class="border-right paddingContainer" style="width: 100%">
+              [HABITO_NOCIVO]
+            </div>
+            <div class="border-right paddingContainer">Alergias</div>
+            <div class="border-right paddingContainer" style="width: 100%">
+              [ALERGIAS]
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="border paddingContainer">Ant. Personales</div>
+          <div class="border paddingContainer">[ANT_PERSONALES]</div>
+        </div>
+        <div class="container">
+          <div class="border paddingContainer">Ant. Familiares</div>
+          <div class="border paddingContainer">[ANT_FAMILIARES]</div>
+        </div>
+      </section>
+      <section class="table">
+        <div class="titulo">VIII. DIAGNÓSTICOS</div>
+        <div class="container2 text-center">
+          <div class="border paddingContainer">N°</div>
+          <div class="border paddingContainer">CIE-10</div>
+          <div class="border paddingContainer">DIAGNÓSTICOS</div>
+          <div class="border paddingContainer">P</div>
+          <div class="border paddingContainer">D</div>
+          <div class="border paddingContainer">R</div>
+        </div>
+        <div class="container2 text-center">
+          <div class="border paddingContainer">1</div>
+          <div class="border paddingContainer">[CIE_10_1]</div>
+          <div class="border paddingContainer text-left">[DIAGNOSTICO_1]</div>
+          <div class="border paddingContainer">[P_1]</div>
+          <div class="border paddingContainer">[D_1]</div>
+          <div class="border paddingContainer">[R_1]</div>
+        </div>
+      </section>
+      <section class="table">
+        <div class="titulo">IX. RECOMENDACIONES</div>
+        <div class="container3">
+          <div class="border paddingContainer">1.</div>
+          <div class="border paddingContainer">[RECOMENDACION_NUMERO${n}]</div>
+        </div>
+      </section>
+      <div class="firma">FECHA DE INFORME AUDITADO</div>
     </main>
   </body>
 </html>
