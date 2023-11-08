@@ -40,19 +40,48 @@
     .container {
       display: grid;
       grid-template-columns: 192px 1fr 60px 210px 60px 1fr;
-      grid-gap: 10px;
+      gap: 10px;
     }
-    .separarPuntos {
-      display: flex;
-      justify-content: space-between;
+    .container2 {
+      display: grid;
+      grid-template-columns: 150px 1fr 150px 140px 130px 150px 100px 150px;
+      gap: 10px;
     }
-    hr {
-      border: 1px solid #000;
+
+    .container3 {
+      display: grid;
+      grid-template-columns: 150px 150px 1fr;
+      gap: 10px;
     }
-    .semiBold {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
+    .container4 {
+      display: grid;
+      grid-template-columns: 120px 1fr 120px 1fr 120px 1fr;
+      gap: 10px;
+    }
+    .container5 {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+    }
+
+    .container6 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .container7 {
+      display: grid;
+      grid-template-columns: 70px 1fr 300px 250px;
+      gap: 10px;
+    }
+
+    .container8 {
+      display: grid;
+      grid-template-columns: 120px 1fr 220px 100px 1fr;
+      gap: 10px;
+    }
+
+    .center {
+      text-align: center;
     }
     .title {
       background-color: #dcdcdc;
@@ -63,9 +92,6 @@
     }
     .br {
       border-right: 1px solid #000;
-    }
-    .bl {
-      border-left: 1px solid #000;
     }
     .bb {
       border-bottom: 1px solid #000;
@@ -78,6 +104,14 @@
     .pcaja {
       padding: 8px 4px;
       white-space: wrap;
+    }
+    .box {
+      min-height: 100px;
+    }
+    .firma {
+      border-top: 3px solid #000;
+      width: 340px;
+      text-align: center;
     }
   </style>
   <body>
@@ -155,6 +189,481 @@
         <div class="br pcaja" style="grid-column: span 2">[ACOMPANANTE]</div>
         <div class="br pcaja">Parentesco :</div>
         <div class="pcaja">[PARENTESCO]</div>
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        ENFERMEDAD ACTUAL - MOTIVO DE CONSULTA
+      </div>
+      <div class="container2 bcaja">
+        <div class="br pcaja">Motivo de Consulta:</div>
+        <div class="br pcaja">[MOTIVO_CONSULTA]</div>
+
+        <div class="br pcaja">Tiempo de enfermedad :</div>
+        <div class="br pcaja">[TIEMPO_ENF]</div>
+
+        <div class="br pcaja">Forma de inicio:</div>
+        <div class="br pcaja">[FORMA_INICIO]</div>
+
+        <div class="br pcaja">Curso:</div>
+        <div class="pcaja">[CURSO]</div>
+
+        <div class="box pcaja bt bb" style="grid-column: span 9">
+          [ENFERMEDAD_AREA]
+        </div>
+      </div>
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        ANTECEDENTES PATOLÓGICOS PERSONALES
+      </div>
+      <div class="box pcaja bcaja">[ANTECEENTES_PATOLOGICOS]</div>
+      <div class="bcaja pcaja container" style="font-weight: 700">Habitos</div>
+      <div class="container3 bcaja">
+        <div class="pcaja br" style="text-align: right">( [BOOLEAN_T] )</div>
+        <div class="pcaja br">Tabaco:</div>
+        <div class="pcaja">[TABACO]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br" style="text-align: right">( [BOOLEAN_A] )</div>
+        <div class="pcaja br">Alcohol :</div>
+        <div class="pcaja">[ALCOHOL]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br" style="text-align: right">( [BOOLEAN_D] )</div>
+        <div class="pcaja br">Drogas :</div>
+        <div class="pcaja">[DROGAS]</div>
+      </div>
+
+      <div class="container3 bcaja">
+        <div class="pcaja br" style="text-align: right">( [BOOLEAN_AF] )</div>
+        <div class="pcaja br">Actividad Física :</div>
+        <div class="pcaja">[A_FISICA]</div>
+      </div>
+
+      <div class="container3 bcaja">
+        <div class="pcaja br" style="text-align: right">( [BOOLEAN_O] )</div>
+        <div class="pcaja br">Otros :</div>
+        <div class="pcaja">[OTROS_H]</div>
+      </div>
+
+      <div class="container3 bcaja bb">
+        <div class="pcaja br">Alergias :</div>
+        <div class="pcaja" style="grid-column: span 2">[OTROS_H]</div>
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        ANTECEDENTES PATOLÓGICOS FAMILIARES
+      </div>
+      <div class="box pcaja bcaja bb" style="grid-column: span 9">
+        [ENFERMEDAD_FAMILIARES]
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        ANTECEDENTES GINECO - OBSTETRICOS
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">Menarquia:</div>
+        <div class="pcaja br">[MENARQUIA] años</div>
+        <div class="pcaja br">Régimen Catamenial:</div>
+        <div class="pcaja br">[REGIMEN_CATAMENIAL]</div>
+        <div class="pcaja br">FUM:</div>
+        <div class="pcaja">[FUM]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">MAC:</div>
+        <div class="pcaja br">[MAC]</div>
+        <div class="pcaja br">Vida Sx.Activa:</div>
+        <div class="pcaja br flex" style="gap: 10px">
+          <div>( [BOOLEAN_NO] ) NO</div>
+          <div>([BOOLEAN_SI]) SI</div>
+        </div>
+        <div class="pcaja br">1er Contacto Sx</div>
+        <div class="pcaja">[CONTACTO_SX]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">N° Parejas Sx:</div>
+        <div class="pcaja br">[N_PAREJAS_SX]</div>
+        <div class="pcaja br">Vida Sx.Activa:</div>
+        <div class="pcaja br flex" style="gap: 10px">
+          <div>G: [G]</div>
+          <div>P: [P]</div>
+        </div>
+        <div class="pcaja br">Cesáreas</div>
+        <div class="pcaja">[CESAREAS]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">Fin Ult. Embarazo:</div>
+        <div class="pcaja br flex" style="gap: 10px; grid-column: span 2">
+          <div>( [BOOLEAN_UE1] ) Menos 1 año</div>
+          <div>([BOOLEAN_UL5]) Mayor 5 años</div>
+        </div>
+        <div class="pcaja br">Observaciones:</div>
+        <div class="pcaja" style="grid-column: span 2">[OBSERVACIONES]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">Tensión Pre Menstrual:</div>
+        <div class="pcaja br">[TENSION_PRE_MENSTRUAL]</div>
+        <div class="pcaja br">Dismenorrea:</div>
+        <div class="pcaja br">[DISMENORREA]</div>
+        <div class="pcaja br">Dispareunia:</div>
+        <div class="pcaja">[DISPAREUNIA]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">Sangrado Post Coital:</div>
+        <div class="pcaja br">[SANGRADO_POST_COITAL]</div>
+        <div class="pcaja br">Metrorragia:</div>
+        <div class="pcaja br">[METRORRAGIA]</div>
+        <div class="pcaja br">Alt.Ciclo Menstrual:</div>
+        <div class="pcaja">[ALT_CICLO_MENSTRUAL]</div>
+      </div>
+
+      <div class="container4 bcaja">
+        <div class="pcaja br">Últ. PAP:</div>
+        <div
+          class="pcaja"
+          style="display: inline-flex; gap: 30px; grid-column: span 5"
+        >
+          <div>( [BOOLEAN_POS] ) +</div>
+          <div>([BOOLEAN_NEG]) -</div>
+          <div>([BOOLEAN_NSH]) No se hizo</div>
+        </div>
+      </div>
+      <div class="container4 bcaja bb">
+        <div class="pcaja br">Últ. Colposcopía:</div>
+        <div
+          class="pcaja"
+          style="display: inline-flex; gap: 30px; grid-column: span 5"
+        >
+          <div>( [BOOLEAN_CPOS] ) +</div>
+          <div>([BOOLEAN_CNEG]) -</div>
+          <div>([BOOLEAN_CNSH]) No se hizo</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        FUNCIONES BIOLOGICAS
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br">Apetito:</div>
+        <div class="pcaja" style="grid-column: span 2">[APETITO]</div>
+      </div>
+
+      <div class="container3 bcaja">
+        <div class="pcaja br">Sed:</div>
+        <div class="pcaja" style="grid-column: span 2">[SED]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br">Sueño:</div>
+        <div class="pcaja" style="grid-column: span 2">[SUENIO]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br">Orina:</div>
+        <div class="pcaja" style="grid-column: span 2">[ORINA]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br">Deposiciones:</div>
+        <div class="pcaja" style="grid-column: span 2">[DEPOSICIONES]</div>
+      </div>
+      <div class="container3 bcaja">
+        <div class="pcaja br">Variación Ponderal (&gt;o&lt;5kg/mes)</div>
+        <div class="pcaja" style="grid-column: span 2">[VACIO_PONDERAL]</div>
+      </div>
+      <div class="title bcaja pcaja">EXAMEN FÍSICO</div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Inspección General</div>
+        <div>
+          <div class="pcaja bb">Estado mental : [ESTADO MENTAL]</div>
+          <div class="pcaja bb">Ectoscopia : [ECTOSCOPIA]</div>
+          <div class="pcaja">Otros : [OTROS_IG]</div>
+        </div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Signos Vitales (Triaje)</div>
+        <div>
+          <div class="container6 bb">
+            <div class="pcaja br">Peso :</div>
+            <div class="pcaja br">[PESO_SV]</div>
+            <div class="pcaja br">Talla :</div>
+            <div class="pcaja br">[TALLA_SV]</div>
+            <div class="pcaja br">IMC :</div>
+            <div class="pcaja" style="grid-column: span 3">[IMC_SV]</div>
+          </div>
+          <div class="container6">
+            <div class="pcaja br">FC :</div>
+            <div class="pcaja br">[FC_SV]</div>
+            <div class="pcaja br">PA :</div>
+            <div class="pcaja br">[PA_SV]</div>
+            <div class="pcaja br">FR :</div>
+            <div class="pcaja br">[FR_SV]</div>
+            <div class="pcaja br">T° :</div>
+            <div class="pcaja">[T_SV]</div>
+          </div>
+        </div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Mamas Inspección:</div>
+        <div class="" style="display: inline-flex; gap: 30px">
+          <div class="pcaja">( [MI_N] ) Normal</div>
+          <div class="pcaja">( [MI_A] )Anormal</div>
+          <div class="pcaja">( [MI_NSR] )No se realiza</div>
+          <div class="pcaja">Detallar: [MAMAS_INSPECCION]</div>
+        </div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Genital Exter. Inspección:</div>
+        <div class="" style="display: inline-flex; gap: 30px">
+          <div class="pcaja">( [GEI_N] ) Normal</div>
+          <div class="pcaja">( [GEI_A] )Anormal</div>
+          <div class="pcaja">( [GEI_NSR] )No se realiza</div>
+          <div class="pcaja">Detallar: [GENIAEXT_INSPECCION]</div>
+        </div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Especuloscopía Inspección:</div>
+        <div class="" style="display: inline-flex; gap: 30px">
+          <div class="pcaja">( [ESP_N] ) Normal</div>
+          <div class="pcaja">( [ESP_A] )Anormal</div>
+          <div class="pcaja">( [ESP_NSR] )No se realiza</div>
+          <div class="pcaja">Detallar: [ESPECUL_INSPECCION]</div>
+        </div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Tacto Bimanual Inspección:</div>
+        <div class="" style="display: inline-flex; gap: 30px">
+          <div class="pcaja">( [TBI_N] ) Normal</div>
+          <div class="pcaja">( [TBI_A] )Anormal</div>
+          <div class="pcaja">( [TBI_NSR] )No se realiza</div>
+          <div class="pcaja">Detallar: [TACTO_INSPECCION]</div>
+        </div>
+      </div>
+
+      <div class="container5 bcaja bb">
+        <div class="pcaja br">Piel y anexos:</div>
+        <div class="pcaja">[PIEL_ANEXOS]</div>
+      </div>
+
+      <div class="container5 bcaja" style="margin-top: 15px">
+        <div class="pcaja br">Sistema Linfático:</div>
+        <div class="pcaja">[SISTEMA_LINFATICO]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Cabeza:</div>
+        <div class="pcaja">[CABEZA]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Cuello:</div>
+        <div class="pcaja">[CUELLO]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Torax:</div>
+        <div class="pcaja">[TORAX]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Aparato Respiratorio:</div>
+        <div class="pcaja">[APARATO_RESPIRATORIO]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Aparato Cardiovascular:</div>
+        <div class="pcaja">[APARATO_CARDIOVASCULAR]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Aparato Digestivo:</div>
+        <div class="pcaja">[APARATO_DIGESTIVO]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Aparato Genitourinario:</div>
+        <div class="pcaja">[APARATO_GENITOURINARIO]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Tacto Rectal:</div>
+        <div class="pcaja">[TACTO_RECTAL]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Ap. Locomotor:</div>
+        <div class="pcaja">[APARATO_LOCOMOTOR]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Marcha:</div>
+        <div class="pcaja">[MARCHA]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Columna:</div>
+        <div class="pcaja">[COLUMNA]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Miembro Superior:</div>
+        <div class="pcaja">[MIEMBRO_SUPERIOR]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Miembro Inferior:</div>
+        <div class="pcaja">[MIEMBRO_INFERIOR]</div>
+      </div>
+      <div class="container5 bcaja">
+        <div class="pcaja br">Sistema Nervioso:</div>
+        <div class="pcaja">[SISTEMA_NERVIOSO]</div>
+      </div>
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        PLAN DE TRABAJO
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">N°</div>
+        <div class="pcaja br center">DIAGNÓSTICO</div>
+        <div class="pcaja br center">TIPO</div>
+        <div class="pcaja center">CIE 10</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">1.</div>
+        <div class="pcaja br">[DIAGNOSTICO1]</div>
+        <div class="pcaja br center flex" style="gap: 10px">
+          <div>( [BOOLEAN_P1] ) P</div>
+          <div>([BOOLEAN_D1]) D</div>
+        </div>
+        <div class="pcaja center">[CIE_1]</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">2.</div>
+        <div class="pcaja br">[DIAGNOSTICO2]</div>
+        <div class="pcaja br center flex" style="gap: 10px">
+          <div>( [BOOLEAN_P2] ) P</div>
+          <div>([BOOLEAN_D2]) D</div>
+        </div>
+        <div class="pcaja center">[CIE_2]</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">3.</div>
+        <div class="pcaja br">[DIAGNOSTICO3]</div>
+        <div class="pcaja br center flex" style="gap: 10px">
+          <div>( [BOOLEAN_P3] ) P</div>
+          <div>([BOOLEAN_D3]) D</div>
+        </div>
+        <div class="pcaja center">[CIE_3]</div>
+      </div>
+      <div class="container7 bcaja bb">
+        <div class="pcaja br center">4.</div>
+        <div class="pcaja br">[DIAGNOSTICO4]</div>
+        <div class="pcaja br center flex" style="gap: 10px">
+          <div>( [BOOLEAN_P4] ) P</div>
+          <div>([BOOLEAN_D4]) D</div>
+        </div>
+        <div class="pcaja center">[CIE_4]</div>
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        EXAMENES AUXILIARES A SOLICITAR
+      </div>
+
+      <div class="container7 bcaja">
+        <div class="pcaja br center">N°</div>
+        <div class="pcaja br center" style="grid-column: span 2">
+          DESCRIPCIÓN
+        </div>
+        <div class="pcaja center">CIE 10</div>
+      </div>
+
+      <div class="container7 bcaja">
+        <div class="pcaja br center">1.</div>
+        <div class="pcaja br" style="grid-column: span 2">[DESCRIPCION1]</div>
+        <div class="pcaja center">[CIE_10_1]</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">2.</div>
+        <div class="pcaja br" style="grid-column: span 2">[DESCRIPCION2]</div>
+        <div class="pcaja center">[CIE_10_2]</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">3.</div>
+        <div class="pcaja br" style="grid-column: span 2">[DESCRIPCION3]</div>
+        <div class="pcaja center">[CIE_10_3]</div>
+      </div>
+      <div class="container7 bcaja">
+        <div class="pcaja br center">4.</div>
+        <div class="pcaja br" style="grid-column: span 2">[DESCRIPCION4]</div>
+        <div class="pcaja center">[CIE_10_4]</div>
+      </div>
+      <div class="container7 bcaja bb">
+        <div class="pcaja br center">5.</div>
+        <div class="pcaja br" style="grid-column: span 2">[DESCRIPCION5]</div>
+        <div class="pcaja center">[CIE_10_5]</div>
+      </div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">TRATAMIENTO</div>
+      <div class="container8 bcaja">
+        <div class="pcaja br center">CIE 10</div>
+        <div class="pcaja br center">MEDICAMENTOS</div>
+        <div class="pcaja br center">PRESENTACIÓN</div>
+        <div class="pcaja br center">CANT.</div>
+        <div class="pcaja center">INDICACIONES</div>
+      </div>
+      <div class="container8 bcaja">
+        <div class="pcaja br center">[CIE 10_T_1]</div>
+        <div class="pcaja br">[MEDICAMENTOS1]</div>
+        <div class="pcaja br center">[PRESENTACION1]</div>
+        <div class="pcaja br center">[CANT1]</div>
+        <div class="pcaja">[INDICACIONES1]</div>
+      </div>
+      <div class="container8 bcaja">
+        <div class="pcaja br center">[CIE 10_T_2]</div>
+        <div class="pcaja br">[MEDICAMENTOS2]</div>
+        <div class="pcaja br center">[PRESENTACION2]</div>
+        <div class="pcaja br center">[CANT2]</div>
+        <div class="pcaja">[INDICACIONES2]</div>
+      </div>
+      <div class="container8 bcaja">
+        <div class="pcaja br center">[CIE 10_T_3]</div>
+        <div class="pcaja br">[MEDICAMENTOS3]</div>
+        <div class="pcaja br center">[PRESENTACION3]</div>
+        <div class="pcaja br center">[CANT3]</div>
+        <div class="pcaja">[INDICACIONES3]</div>
+      </div>
+      <div class="container8 bcaja">
+        <div class="pcaja br center">[CIE 10_T_4]</div>
+        <div class="pcaja br">[MEDICAMENTOS4]</div>
+        <div class="pcaja br center">[PRESENTACION4]</div>
+        <div class="pcaja br center">[CANT4]</div>
+        <div class="pcaja">[INDICACIONES4]</div>
+      </div>
+      <div class="container8 bcaja bb">
+        <div class="pcaja br center">[CIE 10_T_5]</div>
+        <div class="pcaja br">[MEDICAMENTOS5]</div>
+        <div class="pcaja br center">[PRESENTACION5]</div>
+        <div class="pcaja br center">[CANT5]</div>
+        <div class="pcaja">[INDICACIONES5]</div>
+      </div>
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        RECOMENDACIONES
+      </div>
+      <div class="box pcaja bcaja bb">[RECOMENDACIONES]</div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">
+        PRÓXIMA CITA Y/O CONTROL
+      </div>
+      <div class="box pcaja bcaja bb">[PROXIMA_CITA]</div>
+
+      <div style="margin-top: 15px" class="title bcaja pcaja">REFERENCIA</div>
+      <div class="box pcaja bcaja bb">[REFERENCIA]</div>
+
+      <div
+        style="
+          display: flex;
+          margin-top: 70px;
+          padding-bottom: 70px;
+          justify-content: space-between;
+        "
+      >
+        <div>
+          <div class="pcaja">MÉDICO: [MEDICO]</div>
+          <div class="pcaja">CMP: [CMP]</div>
+        </div>
+        <div>
+          <div class="center" style="margin-top: 60px; padding-bottom: 10px">
+            [FIRMA]
+          </div>
+          <div class="firma">FIRMA</div>
+        </div>
       </div>
     </main>
   </body>
