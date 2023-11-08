@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe Ginecologico Regular</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      top: 10px;
+    }
+    h1 {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+    main {
+      margin-top: 80px;
+    }
+
+    .flex {
+      display: flex;
+    }
+    .flex > div {
+      flex: 1 1 auto;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 192px 1fr 60px 210px 60px 1fr;
+      grid-gap: 10px;
+    }
+    .separarPuntos {
+      display: flex;
+      justify-content: space-between;
+    }
+    hr {
+      border: 1px solid #000;
+    }
+    .semiBold {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .title {
+      background-color: #dcdcdc;
+      font-weight: 700;
+    }
+    .bt {
+      border-top: 1px solid #000;
+    }
+    .br {
+      border-right: 1px solid #000;
+    }
+    .bl {
+      border-left: 1px solid #000;
+    }
+    .bb {
+      border-bottom: 1px solid #000;
+    }
+    .bcaja {
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      border-left: 1px solid #000;
+    }
+    .pcaja {
+      padding: 8px 4px;
+      white-space: wrap;
+    }
+  </style>
+  <body>
+    <header>
+      <img src="logo.jpg" />
+      <h1>REGISTRO MÉDICO N° [RM_N]</h1>
+    </header>
+    <main>
+      <div class="flex">
+        <div style="display: flex; gap: 12px">
+          <div>Fecha:</div>
+          <div>[FECHA]</div>
+        </div>
+        <div style="display: flex; gap: 12px">
+          <div>Hora:</div>
+          <div>[HORA]</div>
+        </div>
+      </div>
+      <!-- TABLAS -->
+      <div style="margin-top: 15px" class="title bcaja container pcaja">
+        Datos Personales
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Apellidos y Nombres:</div>
+        <div class="pcaja" style="grid-column: span 5">[APELLIDOS_NOMBRES]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Fecha de Nacimiento :</div>
+        <div class="br pcaja">[FECHA_NACIMIENTO]</div>
+        <div class="br pcaja">Edad :</div>
+        <div class="br pcaja">[EDAD]</div>
+        <div class="br pcaja">Sexo :</div>
+        <div class="pcaja">[SEXO]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Doc. de Identidad :</div>
+        <div class="br pcaja" style="grid-column: span 2">[DNI]</div>
+        <div class="br pcaja">Estado Civil :</div>
+        <div class="pcaja">[ESTADO_CIVIL]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Lugar de Nacimiento :</div>
+        <div class="br pcaja" style="grid-column: span 2">
+          [LUGAR_NACIMIENTO]
+        </div>
+        <div class="br pcaja">Procedencia :</div>
+        <div class="pcaja">[PROCEDENCIA]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Dirección :</div>
+        <div class="pcaja" style="grid-column: span 5">[DIRECCION]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Correo Electrónico:</div>
+        <div class="br pcaja" style="grid-column: span 2">[EMAIL]</div>
+        <div class="br pcaja">Teléfono :</div>
+        <div class="pcaja">[TELEFONO]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Grado de Instrucción :</div>
+        <div class="br pcaja" style="grid-column: span 2">
+          [GRADO_INSTRUCCION]
+        </div>
+        <div class="br pcaja">Ocupación :</div>
+        <div class="pcaja">[OCUPACION]</div>
+      </div>
+      <div class="container bcaja">
+        <div class="br pcaja">Raza :</div>
+        <div class="br pcaja" style="grid-column: span 2">[RAZA]</div>
+        <div class="br pcaja">Grupo y Factor Sanguíneo :</div>
+        <div class="pcaja">[GRUPO_SANGUINEO]</div>
+      </div>
+      <div class="container bcaja bb">
+        <div class="br pcaja">Acompañante :</div>
+        <div class="br pcaja" style="grid-column: span 2">[ACOMPANANTE]</div>
+        <div class="br pcaja">Parentesco :</div>
+        <div class="pcaja">[PARENTESCO]</div>
+      </div>
+    </main>
+  </body>
+</html>
